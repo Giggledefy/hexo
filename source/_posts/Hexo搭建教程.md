@@ -73,7 +73,7 @@ hexo s
 npm install hexo-deployer-git --save
 
 
-ssh-keygen -t rss -C “你的邮箱地址"
+ssh-keygen -t rsa -C “你的邮箱地址"
 ```
 会在家目录下生成一个.ssh文件夹，里面包含两个文件，cat 一下 id_rsa.pub 文件，复制其内容。打开自己的github设置里有一个SSH Keys，添加key（在这里粘贴，名字随意起）。
 
