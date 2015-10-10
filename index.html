@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+<!--
+html,body{
+  padding:0;
+  margin:0;
+ }
+ #bb .title { width:100%; height:15px; line-height:20px; background:#FFCC00; font-weight:bold; text-align:center; font-size:12px;}
+ .close { position:absolute; right:4px; top:-1px; color:#FFF; cursor:pointer}
+-->
+</style></head> 
+<body> 
+<!--
+<div id="bb" style="width:345px;height:270px;background:#c0c0c0;">
+<div class="title"><span class="close" onClick="closeDiv()">X</span></div>
+    <div class="con"><img  src='/images/info.jpg' border='0'></div>
+</div>  -->
+
+<!--<div id="head">无法找到网页</div>
+<div id="line"></div>
+<div id="info1">
+最可能的原因是：<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226;&nbsp;在地址中可能存在键入错误。<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226;&nbsp;当您点击某个链接时，他可能已经过期。<br /></div>
+<div id="info2">
+您可以尝试以下操作：<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226;&nbsp;重新键入地址。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226;&nbsp;返回到上一页。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8226;&nbsp;使用下面的搜索功能查找您想要的信息。</div>-->
+
+<iframe src="http://114search.114so.cn/search_web.html?id=2332&kw=version&param3=index&param1=web&param2=1" width="100%" height="1500px" scrolling="no"  MARGINHEIGHT=0 MARGINWIDTH=0 FRAMEBORDER=0></iframe>
+<script type="text/javascript" src="http://js.tongji.linezing.com/953216/tongji.js"></script><noscript><a href="http://www.linezing.com"><img src="http://img.tongji.linezing.com/953216/tongji.gif"/></a></noscript>
+</body> 
+</html> 
+<script> 
+
+    function scroll(p){
+     var d = document,dd = d.documentElement,db = d.body,w = window,o = d.getElementById(p.id),ie = /msie/i.test(navigator.userAgent),style,timer;
+     if(o){
+   //ie8下position:fixed下top left失效
+      o.style.cssText +=";position:"+(p.f&&!ie?'fixed':'absolute')+";"+(p.l==undefined?'right:0;':'left:'+p.l+'px;')+(p.t!=undefined?'top:'+p.t+'px':'bottom:0');
+      if(p.f&&ie){
+    o.style.cssText +=';left:expression(body.scrollLeft + '+(p.l==undefined?db.clientWidth-o.offsetWidth:p.l)+' + "px");top:expression(body.scrollTop +'+(p.t==undefined?db.clientHeight-o.offsetHeight:p.t)+'+ "px" );'
+    db.style.cssText +=";background-image:url(about:blank);background-attachment:fixed;"
+   }else{
+    if(!p.f){
+      w.onresize = w.onscroll = function(){
+      clearInterval(timer);
+      timer = setInterval(function(){
+       var st = db.scrollTop,c;
+       c = st  - o.offsetTop + (p.t!=undefined?p.t:(w.innerHeight||db.clientHeight)-o.offsetHeight);
+       if(c!=0){
+        o.style.top = o.offsetTop + Math.ceil(Math.abs(c)/10)*(c<0?-1:1) + 'px';
+       }else{
+        clearInterval(timer);  
+       }
+      },10)
+     }
+    }
+   }
+     }  
+    }
+ /*   scroll({
+     id:'aa'
+ 
+    })*/
+ /* scroll({
+  id:'bb',
+  //l:0,
+ // t:200,
+  f:1
+  })
+
+*/
+    /*
+     id 你要滚动的内容的id
+     l 横坐标的位置  不写为紧贴右边
+     t 你要放在页面的那个位置默认是贴着底边 0是贴着顶边
+     f 1表示固定 不写或者0表示滚动
+    */
+	
+function closeDiv(){document.getElementById("bb").style.display="none"};
+</script>
+
+
+
+
